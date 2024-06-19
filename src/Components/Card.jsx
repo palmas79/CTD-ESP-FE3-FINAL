@@ -17,7 +17,7 @@ const Card = ({doctor}) => {
       <p>{name}</p>
       <p>{username}</p>  
       </Link>     
-        <button onClick={addFav} className="favButton">Add fav</button>
+        <button onClick={addFav} className="favButton">Agregar a Favoritos</button>
     </div>
   );
 };

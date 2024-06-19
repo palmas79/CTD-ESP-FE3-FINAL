@@ -3,11 +3,12 @@
 
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 
 const Detail = () => {
   const [doctor, setDoctor] = useState({})
   const params = useParams();
+  const navigate = useNavigate()
 
   const url = `https://jsonplaceholder.typicode.com/users/${params.id}`;  
  
@@ -27,6 +28,7 @@ const Detail = () => {
       <h2>Correo electronico: {doctor.email}</h2>
       <h2>Telefono: {doctor.phone}</h2>
       <p>Sitio Web: <a>{doctor.website}</a></p>
+      <button onClick={() => navigate(-1)}>Atras</button>
 
 
       
