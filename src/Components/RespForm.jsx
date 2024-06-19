@@ -1,6 +1,6 @@
 
 
-const RestForm = ({nombre, email}) => {
+const RespForm = ({nombre, email}) => {
   return (
     <>
         <h4> Gracias por tu compra {usuario.nombre}</h4>

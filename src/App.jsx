@@ -8,6 +8,7 @@ import Home from "./Routes/Home"
 import Contact from "./Routes/Contact"
 import Favs from "./Routes/Favs"
 import ErrorPage from "./Components/ErrorPage"
+import Detail from "./Routes/Detail";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path={route.home} element={<Home/>}/>
             <Route path={route.contact} element={<Contact/>}/>
             <Route path={route.favs} element={<Favs/>}/>
+            <Route path={route.detail} element={<Detail/>}/>
             <Route path="*" element={<ErrorPage/>}/>
           </Routes>
           <Footer/>

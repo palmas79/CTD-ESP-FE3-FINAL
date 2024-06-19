@@ -1,8 +1,9 @@
-import React from "react";
+
+import { Link } from "react-router-dom";
 
 
 const Card = ({doctor}) => {
-  const{name, username}= doctor
+  const{id, name, username}= doctor;
   console.log(doctor);
 
   const addFav = ()=>{
@@ -11,9 +12,11 @@ const Card = ({doctor}) => {
 
   return (
     <div className="card">
-      <img src="../../public/images/doctor.jpg" alt="FotoDoc"/>
+      <Link to={`/detail/${id}`}>
+      <img src="../../public/images/doctor.jpg" alt="FotoDoc"/>      
       <p>{name}</p>
-      <p>{username}</p>        
+      <p>{username}</p>  
+      </Link>     
         <button onClick={addFav} className="favButton">Add fav</button>
     </div>
   );
